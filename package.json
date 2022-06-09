@@ -1,0 +1,32 @@
+{
+  "name": "favaas",
+  "description": "Favicon as a Service",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "vercel dev",
+    "deploy": "vercel deploy --prod",
+    "lint": "eslint",
+    "lint:fix": "npm run lint -- --fix"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/magnobiet/favaas.git"
+  },
+  "keywords": [
+    "favicon",
+    "favaas"
+  ],
+  "author": "Magno Fernando Brixner Biét <magno.biet@gmail.com> (https://magnobiet.com/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/magnobiet/favaas/issues"
+  },
+  "homepage": "https://github.com/magnobiet/favaas#readme",
+  "devDependencies": {
+    "@vercel/node": "^2.1.0",
+    "eslint": "^8.17.0",
+    "typescript": "^4.7.3",
+    "vercel": "^25.1.0"
+  }
+}
