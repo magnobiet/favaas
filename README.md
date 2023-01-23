@@ -2,6 +2,8 @@
 
 [![MIT Licence](https://img.shields.io/badge/licence-MIT-blue.svg)](https://license.magnobiet.com/mit/2022)
 
+[![Screen Shot](screenshot.png)](https://favicon.magnobiet.com)
+
 ## TL;DR
 
 ### Development
