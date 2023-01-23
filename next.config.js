@@ -1,7 +1,17 @@
+const isDevelopment = process.env.NODE_ENV === 'development';
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   experimental: {
     appDir: true,
+  },
+  async rewrites() {
+    return [
+      {
+        source: '/e/:emoji',
+        destination: '/api/emoji?emoji=:emoji',
+      },
+    ];
   },
   async headers() {
     return [
@@ -44,4 +54,17 @@ const nextConfig = {
   },
 };
 
-module.exports = nextConfig;
+const withProgressiveWebApplication = require('next-pwa')({
+  dest: 'public',
+  register: true,
+  skipWaiting: true,
+  disable: isDevelopment,
+});
+
+const plugins = [withProgressiveWebApplication];
+
+module.exports = () => {
+  return plugins.reduce((config, plugin) => plugin(config), {
+    ...nextConfig,
+  });
+};
