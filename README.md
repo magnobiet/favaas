@@ -9,20 +9,20 @@
 ### Development
 
 ```bash
-npm install
-npm run dev
+pnpm install
+pnpm dev
 ```
 
 ### Build
 
 ```bash
-npm run build
+pnpm build
 ```
 
 ## Usage
 
 ```html
-<link rel="icon" href="https://favicon.magnobiet.com/e/🐝">
+<link rel="icon" href="https://favicon.magnobiet.com/e/🐝" />
 ```
 
 ## Contributing
