@@ -1,7 +1,6 @@
 {
-  "name": "Favaas",
-  "short_name": "Favicon as a Service",
-  "description": "Favicon as a Service (Favaas) is a free service that allows you to create a favicon for your website in seconds.",
+  "name": "FAVaaS - Favicon as a Service",
+  "short_name": "FAVaaS",
   "icons": [
     {
       "src": "/android-chrome-192x192.png",
@@ -14,8 +13,7 @@
       "type": "image/png"
     }
   ],
-  "theme_color": "#6272a4",
-  "background_color": "#6272a4",
-  "start_url": "https://favicon.magnobiet.com/?utm_source=pwa",
+  "theme_color": "#ffffff",
+  "background_color": "#ffffff",
   "display": "standalone"
 }

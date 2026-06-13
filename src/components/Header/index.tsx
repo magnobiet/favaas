@@ -1,25 +1,31 @@
-import { FC } from 'react';
-import { GoMarkGithub } from 'react-icons/go';
+import Link from 'next/link';
+import { MenuLink } from '../MenuLink';
 
-export const Header: FC = () => {
+export function Header() {
   return (
-    <header className="fixed w-full top-0 bg-white md:bg-opacity-50 backdrop-blur-sm">
-      <div className="py-4 max-w-6xl mx-auto px-5 sm:px-6 flex flex-row justify-between items-center">
-        <h1 className="text-5xl">
+    <header className="mx-auto flex w-full max-w-6xl items-center justify-between px-5 py-6 sm:px-8">
+      <Link
+        href="/"
+        className="group flex items-center gap-3"
+        aria-label="FAVaaS — início"
+      >
+        <span className="grid size-10 place-items-center rounded-xl bg-primary text-xl shadow-sm transition-all duration-300 ease-smooth group-hover:-rotate-6">
           🐝
-          <span className="sr-only"> Favicon as a Service</span>
-        </h1>
+        </span>
 
-        <a
-          href="https://github.com/magnobiet/favaas"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="flex items-center gap-2 text-gray-200 bg-gray-900 hover:bg-gray-800 px-4 py-2 rounded"
-        >
-          <GoMarkGithub />
-          GitHub
-        </a>
-      </div>
+        <span className="font-display text-lg font-bold tracking-tight">
+          FAVaaS
+        </span>
+      </Link>
+
+      <nav
+        aria-label="Navegação principal"
+        className="flex items-center gap-1 text-sm font-medium"
+      >
+        <MenuLink href="/">Início</MenuLink>
+
+        <MenuLink href="/sobre">Sobre</MenuLink>
+      </nav>
     </header>
   );
-};
+}

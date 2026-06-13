@@ -1,23 +1,19 @@
-const isDevelopment = process.env.NODE_ENV === 'development';
+import type { NextConfig } from "next";
 
-/** @type {import('next').NextConfig} */
-const nextConfig = {
-  experimental: {
-    appDir: true,
-  },
+const nextConfig: NextConfig = {
   async rewrites() {
     return [
       {
         source: '/e/:emoji',
-        destination: '/api/emoji?emoji=:emoji',
-      },
+        destination: '/api/favicon/emoji/:emoji',
+      }
     ];
   },
   async headers() {
+    // Security Headers based on: https://nextjs.org/docs/advanced-features/security-headers
     return [
       {
         source: '/:path*',
-        // Security Headers based on: https://nextjs.org/docs/advanced-features/security-headers
         headers: [
           {
             key: 'X-DNS-Prefetch-Control',
@@ -54,17 +50,4 @@ const nextConfig = {
   },
 };
 
-const withProgressiveWebApplication = require('next-pwa')({
-  dest: 'public',
-  register: true,
-  skipWaiting: true,
-  disable: isDevelopment,
-});
-
-const plugins = [withProgressiveWebApplication];
-
-module.exports = () => {
-  return plugins.reduce((config, plugin) => plugin(config), {
-    ...nextConfig,
-  });
-};
+export default nextConfig;
