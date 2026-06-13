@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { isEmoji } from '~/src/utilities';
+import { isEmoji } from '~/utilities';
 
 export async function GET(
   _request: NextRequest,

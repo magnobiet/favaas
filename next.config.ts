@@ -6,7 +6,11 @@ const nextConfig: NextConfig = {
       {
         source: '/e/:emoji',
         destination: '/api/favicon/emoji/:emoji',
-      }
+      },
+      {
+        source: '/d/:domain',
+        destination: '/api/favicon/domain/:domain',
+      },
     ];
   },
   async headers() {

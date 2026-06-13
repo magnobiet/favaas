@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { DM_Sans, Space_Grotesk } from 'next/font/google';
 import type { ReactNode } from 'react';
+
 import './globals.css';
 
 const dmSans = DM_Sans({

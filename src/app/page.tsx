@@ -1,5 +1,4 @@
-import { CopyCodeSnippetButton } from '../components/CopyCodeSnippetButton';
-import { Header } from '../components/Header';
+import { CopyCodeSnippetButton, Header } from '~/components';
 
 export default function HomePage() {
   return (
